@@ -1,0 +1,30 @@
+package bots;
+
+import elf_kingdom.Game;
+import elf_kingdom.Portal;
+
+public class SummonLavaOperation extends ManaOperation {
+
+ 
+	public int GetScore(Game game) {
+	 
+		return 0;
+	}
+
+ 
+	public void ActivateOpreation(Game game) {
+        // Go over all of my portals.
+        for (Portal portal : game.getMyPortals()) {
+			// If the portal can summon a lava giant - do that.
+            if (portal.canSummonIceTroll()) {
+                // Summon the lava giant.
+                portal.summonIceTroll();
+                // Print a message.
+                System.out.println("portal " + portal + " summons a lava giant");
+            }
+        }
+    }
+		
+	}
+
+}
