@@ -15,49 +15,23 @@ public class MyBot implements SkillzBot {
 
 	private static int MaxLavaGiantsNumber = 5;
 
-	// Manaoperation Objects
-	SummonLavaOperation Lopr = new SummonLavaOperation();
-	BuildPortalOpreation Bopr = new BuildPortalOpreation();
-	SummonIceOpreation Iopr = new SummonIceOpreation();
-	//
-
 	public void doTurn(Game game) {
-		decide_Which_Opreation(game);
+
 		// Give orders to my elves.
-		//handleElves(game);
+		handleElves(game);
 		// Give orders to my portals.
-		//handlePortals(game);
+		handlePortals(game);
 
 	}
 
-	public void decide_Which_Opreation(Game game) {
-		// Gives every Operation a Score
-		GiveScore(game);
+	public void decide(Game game) {
+
 		for (Portal p : game.getMyPortals()) {
 			if (game.getMyMana() > p.cost + 30) {
-
-			//	if (Bopr.Score > Iopr.Score && Bopr.Score > Lopr.Score)
-					Bopr.ActivateOperation(game);
-
-			}
-			for (Creature Enemy : game.getEnemyCreatures()) {
-				if (Enemy.inRange(p, 20)) {
-			//		if (Bopr.Score < Iopr.Score && Iopr.Score > Lopr.Score)
-						Iopr.ActivateOperation(game);
-				}
+				
 			}
 
 		}
-		
-		//we should add when we want to implement LavaGiant;
-		//
-		
-	}
-   /*
-    * We should implememnt thos methods
-    */
-	public static void GiveScore(Game game) {  // Decide witch Opreation is more important
-
 	}
 
 	// We assume that decide() returned COLLECT

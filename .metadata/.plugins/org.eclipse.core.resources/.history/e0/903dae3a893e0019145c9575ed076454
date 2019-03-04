@@ -1,0 +1,15 @@
+package bots;
+
+import elf_kingdom.*;
+
+public abstract  class ManaOperation {
+public int Score;
+
+public abstract int GetScore(Game game); 
+public abstract void ActivateOperation(Game game);
+
+public void decide(Game game) {
+
+	
+}
+}

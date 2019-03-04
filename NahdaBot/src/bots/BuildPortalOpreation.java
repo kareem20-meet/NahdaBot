@@ -17,6 +17,7 @@ public class BuildPortalOpreation extends ManaOperation {
 
 		for (Elf elf : elfarray) {
 			if (elf.canBuildPortal()) {
+			    System.out.System.out.println("in");
 				elf.buildPortal();
 			}
 		}

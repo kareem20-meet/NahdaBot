@@ -11,4 +11,4 @@ public abstract void ActivateOperation(Game game) ;
  
 	
 }
-
+}

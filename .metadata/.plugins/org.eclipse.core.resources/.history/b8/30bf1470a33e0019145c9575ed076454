@@ -22,7 +22,7 @@ public class MyBot implements SkillzBot {
 	//
 
 	public void doTurn(Game game) {
-		decide_Which_Opreation(game);
+
 		// Give orders to my elves.
 		//handleElves(game);
 		// Give orders to my portals.
@@ -36,13 +36,13 @@ public class MyBot implements SkillzBot {
 		for (Portal p : game.getMyPortals()) {
 			if (game.getMyMana() > p.cost + 30) {
 
-			//	if (Bopr.Score > Iopr.Score && Bopr.Score > Lopr.Score)
+				if (Bopr.Score > Iopr.Score && Bopr.Score > Lopr.Score)
 					Bopr.ActivateOperation(game);
 
 			}
 			for (Creature Enemy : game.getEnemyCreatures()) {
 				if (Enemy.inRange(p, 20)) {
-			//		if (Bopr.Score < Iopr.Score && Iopr.Score > Lopr.Score)
+					if (Bopr.Score < Iopr.Score && Iopr.Score > Lopr.Score)
 						Iopr.ActivateOperation(game);
 				}
 			}
